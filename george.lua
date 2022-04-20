@@ -342,6 +342,7 @@ local function CharAdded(char)
 		ev = char.ChildAdded:Connect(function(c)
 			if c.Name == "HumanoidRootPart" then
 				ev:Disconnect()
+			if c.Parent.Parent.Name ~= 'Workspace' then
 				ESP:Add(char, {
 					Name = p.Name,
 					Player = p,
